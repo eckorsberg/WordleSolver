@@ -1,4 +1,4 @@
-This is a simple WPF application to assist in narrowing the list of potential valid Wordle words.
+This is a simple Microsoft Visual Studio 2019 WPF application to assist in narrowing the list of potential valid Wordle words.
 From a graphical perspective this application is crude, UI's are not my skill.
 But the application helps to quickly narrow in on the list of potential solutions to the game.
 The UI presents a matrix of 6x5 TextBox's to contain 6 rows of 5 letter guesses.
