@@ -1,0 +1,57 @@
+﻿<Window x:Class="WordleSover.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WordleSover"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="627" Width="800">
+    <Grid>
+        <Label x:Name="LabelR1C1" Content="?" HorizontalAlignment="Left" Margin="70,60,0,0"  VerticalAlignment="Top" FontSize="20" MouseDown="LabelR1C1MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR1C2" Content="?" HorizontalAlignment="Left" Margin="90,60,0,0"  VerticalAlignment="Top" FontSize="20" MouseDown="LabelR1C2MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR1C3" Content="?" HorizontalAlignment="Left" Margin="110,60,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR1C3MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR1C4" Content="?" HorizontalAlignment="Left" Margin="130,60,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR1C4MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR1C5" Content="?" HorizontalAlignment="Left" Margin="150,60,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR1C5MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+
+        <Label x:Name="LabelR2C1" Content="?" HorizontalAlignment="Left" Margin="70,90,0,0"  VerticalAlignment="Top" FontSize="20" MouseDown="LabelR2C1MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR2C2" Content="?" HorizontalAlignment="Left" Margin="90,90,0,0"  VerticalAlignment="Top" FontSize="20" MouseDown="LabelR2C2MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR2C3" Content="?" HorizontalAlignment="Left" Margin="110,90,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR2C3MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR2C4" Content="?" HorizontalAlignment="Left" Margin="130,90,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR2C4MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR2C5" Content="?" HorizontalAlignment="Left" Margin="150,90,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR2C5MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+
+        <Label x:Name="LabelR3C1" Content="?" HorizontalAlignment="Left" Margin="70,120,0,0"  VerticalAlignment="Top" FontSize="20" MouseDown="LabelR3C1MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR3C2" Content="?" HorizontalAlignment="Left" Margin="90,120,0,0"  VerticalAlignment="Top" FontSize="20" MouseDown="LabelR3C2MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR3C3" Content="?" HorizontalAlignment="Left" Margin="110,120,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR3C3MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR3C4" Content="?" HorizontalAlignment="Left" Margin="130,120,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR3C4MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR3C5" Content="?" HorizontalAlignment="Left" Margin="150,120,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR3C5MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+
+        <Label x:Name="LabelR4C1" Content="?" HorizontalAlignment="Left" Margin="70,150,0,0"  VerticalAlignment="Top" FontSize="20" MouseDown="LabelR4C1MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR4C2" Content="?" HorizontalAlignment="Left" Margin="90,150,0,0"  VerticalAlignment="Top" FontSize="20" MouseDown="LabelR4C2MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR4C3" Content="?" HorizontalAlignment="Left" Margin="110,150,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR4C3MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR4C4" Content="?" HorizontalAlignment="Left" Margin="130,150,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR4C4MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR4C5" Content="?" HorizontalAlignment="Left" Margin="150,150,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR4C5MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+
+        <Label x:Name="LabelR5C1" Content="?" HorizontalAlignment="Left" Margin="70, 180,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR5C1MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR5C2" Content="?" HorizontalAlignment="Left" Margin="90, 180,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR5C2MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR5C3" Content="?" HorizontalAlignment="Left" Margin="110,180,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR5C3MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR5C4" Content="?" HorizontalAlignment="Left" Margin="130,180,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR5C4MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR5C5" Content="?" HorizontalAlignment="Left" Margin="150,180,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR5C5MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+
+        <Label x:Name="LabelR6C1" Content="?" HorizontalAlignment="Left" Margin="70, 210,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR5C1MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR6C2" Content="?" HorizontalAlignment="Left" Margin="90, 210,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR5C2MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR6C3" Content="?" HorizontalAlignment="Left" Margin="110,210,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR5C3MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR6C4" Content="?" HorizontalAlignment="Left" Margin="130,210,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR5C4MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+        <Label x:Name="LabelR6C5" Content="?" HorizontalAlignment="Left" Margin="150,210,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="LabelR5C5MouseDown" RenderTransformOrigin="-4.068,-1.266"/>
+
+        <TextBox x:Name="WordChoices" HorizontalAlignment="Left" Margin="455,108,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="430" Width="91" VerticalScrollBarVisibility="Visible"/>
+        <TextBox x:Name="GuessNext" HorizontalAlignment="Left" Margin="68,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="Guess_KeyDown"/>
+        <Label Content="Next Guess" HorizontalAlignment="Left" Margin="68,264,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Invalid letters" HorizontalAlignment="Left" Margin="68,338,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="InvalidLettersBox" HorizontalAlignment="Left" Margin="70,378,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" KeyDown="InvalidBox_KeyDown"/>
+        <Label Content="# of words" HorizontalAlignment="Left" Margin="455,44,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="NwordsBox" HorizontalAlignment="Left" Margin="455,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" IsReadOnly="True"/>
+        <Label Content="Answer" HorizontalAlignment="Left" Margin="70,433,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="AnswerBox" HorizontalAlignment="Left" Margin="79,464,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+
+    </Grid>
+</Window>
