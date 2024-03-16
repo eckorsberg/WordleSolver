@@ -212,7 +212,11 @@ namespace WordleSover
             GetLetterStatus(ref letterStates[4, 4], ref letterLabels[4, 4]);
         }
         #endregion
-
+        /// <summary>
+        /// Given an input word, will search the list of valid Wordle words if this is a valid guess
+        /// </summary>
+        /// <param name="quess"></param>
+        /// <returns>true if guess is valid, else false</returns>
         bool IsWordValid(string quess)
         {
             bool bResult = false;
@@ -231,6 +235,7 @@ namespace WordleSover
 
             return bResult;
         }
+
         /// <summary>
         /// Shared handler to label click events, opens dialog box to mark state of entered letters
         /// this is the main UI portion of the app
@@ -261,10 +266,6 @@ namespace WordleSover
                 //found exact match, should greatly reduce list
                 Answer[rLetter.GetColumn()] = rLetter.GetLetter();
                 UpdateAnswerBox();
-
-                //remove from ValidChars
-                //ValidChars = ValidChars.Replace(rLetter.GetLetter(), String(""));
-                //ValidChars = ValidChars.Replace(rLetter.GetLetter(), string.Empty);
 
                 //set color to Green and enum
                 SolidColorBrush br = new SolidColorBrush();
@@ -303,7 +304,6 @@ namespace WordleSover
                 WordChoices.Text = ValidWordleList;
                 nlines = ComputeNumberOfLines(ValidWordleList);
                 NwordsBox.Text = nlines.ToString();
-
             }
             else if (se.InvalidLetter.IsChecked == true)
             {
@@ -325,12 +325,15 @@ namespace WordleSover
                 int nlines = ComputeNumberOfLines(ValidWordleList);
                 NwordsBox.Text = nlines.ToString();
 
-
                 //update list of invalid letters
                 InvalidLettersBox.Text = InvalidChars;
             }
         }
-
+        /// <summary>
+        /// Given a string with \n linefeeds, compute the number of lines in this string
+        /// </summary>
+        /// <param name="list"></param>
+        /// <returns>The number of lines delimited by \n</returns>
         private int ComputeNumberOfLines(string list)
         {
             int nlines = 0;
@@ -350,6 +353,10 @@ namespace WordleSover
         }
 
         #region TextboxActions
+        /// <summary>
+        /// User entered a set of char's in the Invalid letter TextBox.
+        /// Add to the list, remove the potential set of words containing an invalid letter and update the UI matrix color.
+        /// </summary>
         private void EnterInvalidEntry()
         {
             InvalidChars = InvalidLettersBox.Text;
@@ -423,12 +430,6 @@ namespace WordleSover
                             br.Color = Colors.Gray;
                             letterLabels[NextRow, col].Background = br;     //set color of label
                         }
-                        //else if (ValidChars.Contains(GuessNext.Text[col].ToString()))
-                        //{
-                        //    SolidColorBrush br = new SolidColorBrush();
-                        //    br.Color = Colors.Yellow;
-                        //    letterLabels[NextRow, col].Background = br;     //set color of label
-                        //}
                     }
                 }
                 NextRow++;
