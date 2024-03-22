@@ -6,6 +6,7 @@
     <UseWPF>true</UseWPF>
     <AssemblyName>WordleSolver</AssemblyName>
     <RootNamespace>WordleSolver</RootNamespace>
+    <ApplicationIcon>Icon1.ico</ApplicationIcon>
   </PropertyGroup>
 
 </Project>
