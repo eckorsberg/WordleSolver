@@ -33,14 +33,10 @@ namespace WordleSover
         string InvalidChars = "";                               // list of letters NOT in answer
         string ValidChars = "";                                 // list of letters somewhere in answer
 
+        #region Init
         public MainWindow()
         {
             InitializeComponent();
-            #region Init
-            for (int col = 0; col < 5; col++)
-            {
-                Answer[col] = '?';
-            }
 
             // create [5,6] array
             for (int row = 0; row < 6; row++)
@@ -90,14 +86,50 @@ namespace WordleSover
 
             //open wordle.txt
             ValidWordleListOriginal = System.IO.File.ReadAllText("../../../valid-wordle-words.txt");  //wordle-La
+
+            Init();
+        }
+        private void Init()
+        {
+            NextRow = 0;
+
             ValidWordleList = System.IO.File.ReadAllText("../../../wordle-La.txt");  //wordle-La
             WordChoices.Text = ValidWordleList;
             int nlines = ComputeNumberOfLines(ValidWordleList);
             NwordsBox.Text = nlines.ToString();
 
             AnswerBox.Text = "?????";
-            #endregion
+
+            for (int col = 0; col < 5; col++)
+            {
+                Answer[col] = '?';
+            }
+
+            Answer = new char[5];                            // container for potential answer
+            InvalidChars = "";                               // list of letters NOT in answer
+            ValidChars = "";                                 // list of letters somewhere in answer
+
+            GuessNext.Text = "";
+            InvalidLettersBox.Text = "";
+
+            SolidColorBrush br = new SolidColorBrush();
+            br.Color = Colors.White;
+
+            for (int row = 0; row < 6; row++)
+            {
+                for (int col = 0; col < 5; col++)
+                {
+                    letterLabels[row, col].Content = '?';
+
+                    letterStates[row,col].SetState(LetterStateEnum.eMatch);
+                    letterLabels[row, col].Background = br;     //set color of label
+                }
+            }
+
+
         }
+        #endregion
+
 
 
         #region LabelClicks
@@ -622,5 +654,12 @@ namespace WordleSover
             }
         }
         #endregion
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // re-init
+            Init();
+        }
+
     }
 }
