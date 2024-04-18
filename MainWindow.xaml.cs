@@ -100,12 +100,12 @@ namespace WordleSover
 
             AnswerBox.Text = "?????";
 
+            Answer = new char[5];                            // container for potential answer
             for (int col = 0; col < 5; col++)
             {
                 Answer[col] = '?';
             }
 
-            Answer = new char[5];                            // container for potential answer
             InvalidChars = "";                               // list of letters NOT in answer
             ValidChars = "";                                 // list of letters somewhere in answer
 
@@ -287,7 +287,8 @@ namespace WordleSover
             Window setLetterResult = new Window
             {
                 Title = "My User Control Dialog",
-                Content = se
+                Content = se,
+                SizeToContent= SizeToContent.WidthAndHeight
             };
 
             setLetterResult.ShowDialog();

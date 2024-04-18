@@ -4,13 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WordleSover"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <Button x:Name="SetLetterOk" Content="OK" HorizontalAlignment="Left" Margin="85,225,0,0" VerticalAlignment="Top" Click="SetLetterOkClick"/>
-        <RadioButton x:Name="Match" Content="Match" HorizontalAlignment="Left" Margin="86,100,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="ValidWrongSpot" Content="ValidWrongSpot" HorizontalAlignment="Left" Margin="85,134,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="InvalidLetter" Content="Invalid" HorizontalAlignment="Left" Margin="85,171,0,0" VerticalAlignment="Top"/>
+             mc:Ignorable="d" Height="280" Width="295">
+    <Grid Margin="0,0,10,10">
+        <RadioButton x:Name="Match" Content="Match" HorizontalAlignment="Left" Margin="86,100,0,0" VerticalAlignment="Top" Checked="Match_Checked"/>
+        <RadioButton x:Name="ValidWrongSpot" Content="ValidWrongSpot" HorizontalAlignment="Left" Margin="85,134,0,0" VerticalAlignment="Top" Checked="ValidWrongSpot_Checked"/>
+        <RadioButton x:Name="InvalidLetter" Content="Invalid" HorizontalAlignment="Left" Margin="85,171,0,0" VerticalAlignment="Top" Checked="InvalidLetter_Checked"/>
 
     </Grid>
 </UserControl>

@@ -48,6 +48,27 @@ namespace WordleSover
             }
         }
 
+        private void Match_Checked(object sender, RoutedEventArgs e)
+        {
+            Match.IsChecked = true;
+            Window parentWindow = (Window)this.Parent;
+            parentWindow.Close();
+        }
+
+        private void ValidWrongSpot_Checked(object sender, RoutedEventArgs e)
+        {
+            ValidWrongSpot.IsChecked = true;
+            Window parentWindow = (Window)this.Parent;
+            parentWindow.Close();
+        }
+
+        private void InvalidLetter_Checked(object sender, RoutedEventArgs e)
+        {
+            InvalidLetter.IsChecked = true;
+            Window parentWindow = (Window)this.Parent;
+            parentWindow.Close();
+        }
+
 #else
         //public int SetLetterRadioResult = 0;  //1=Match, 2=ValidWrongSpot, 3=Invalid
         LetterStateEnum SetLetterRadioResult = LetterStateEnum.eUnknown;  //1=Match, 2=ValidWrongSpot, 3=Invalid
