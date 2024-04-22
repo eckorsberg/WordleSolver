@@ -6,9 +6,9 @@
              xmlns:local="clr-namespace:WordleSover"
              mc:Ignorable="d" Height="280" Width="295">
     <Grid Margin="0,0,10,10">
-        <RadioButton x:Name="Match" Content="Match" HorizontalAlignment="Left" Margin="86,100,0,0" VerticalAlignment="Top" Checked="Match_Checked"/>
-        <RadioButton x:Name="ValidWrongSpot" Content="ValidWrongSpot" HorizontalAlignment="Left" Margin="85,134,0,0" VerticalAlignment="Top" Checked="ValidWrongSpot_Checked"/>
-        <RadioButton x:Name="InvalidLetter" Content="Invalid" HorizontalAlignment="Left" Margin="85,171,0,0" VerticalAlignment="Top" Checked="InvalidLetter_Checked"/>
+        <RadioButton x:Name="Match" Content="Match" HorizontalAlignment="Left" Margin="86,100,0,0" VerticalAlignment="Top" Checked="Match_Checked" Background="Lime"/>
+        <RadioButton x:Name="ValidWrongSpot" Content="ValidWrongSpot" HorizontalAlignment="Left" Margin="85,134,0,0" VerticalAlignment="Top" Checked="ValidWrongSpot_Checked" Background="#FFF9F90D"/>
+        <RadioButton x:Name="InvalidLetter" Content="Invalid" HorizontalAlignment="Left" Margin="85,171,0,0" VerticalAlignment="Top" Checked="InvalidLetter_Checked" Background="#FF999991"/>
 
     </Grid>
 </UserControl>
