@@ -370,12 +370,15 @@ namespace WordleSover
         private int ComputeNumberOfLines(string list)
         {
             int nlines = 0;
-            System.IO.StringReader strReader = new System.IO.StringReader(list);
-            string aLine = strReader.ReadLine();
-            while (aLine != null)
+            if (list != null)
             {
-                nlines++;
-                aLine = strReader.ReadLine();
+                System.IO.StringReader strReader = new System.IO.StringReader(list);
+                string aLine = strReader.ReadLine();
+                while (aLine != null)
+                {
+                    nlines++;
+                    aLine = strReader.ReadLine();
+                }
             }
             return nlines;
         }
@@ -488,32 +491,35 @@ namespace WordleSover
 
             string aLine = null;
             string ReturnString = null;
-            System.IO.StringReader strReader = new System.IO.StringReader(validWordleList);
-            aLine = strReader.ReadLine();
-            while (aLine != null)
+            if (validWordleList != null)
             {
+                System.IO.StringReader strReader = new System.IO.StringReader(validWordleList);
+                aLine = strReader.ReadLine();
+                while (aLine != null)
+                {
 #if MatchDebug
                 if (aLine == MATCH_WORD)
                 {
                     int foo = 1;
                 }
 #endif
-                bool allCharsFound = true;
-                for (int i = 0; i < validChars.Length; i++)
-                {
-                    if (aLine.Contains(validChars[i]) == false)
+                    bool allCharsFound = true;
+                    for (int i = 0; i < validChars.Length; i++)
                     {
-                        allCharsFound = false;
-                        //ReturnString += aLine + '\n';
-                        break;
+                        if (aLine.Contains(validChars[i]) == false)
+                        {
+                            allCharsFound = false;
+                            //ReturnString += aLine + '\n';
+                            break;
+                        }
                     }
-                }
-                if (allCharsFound)
-                {
-                    ReturnString += aLine + '\n';
-                }
+                    if (allCharsFound)
+                    {
+                        ReturnString += aLine + '\n';
+                    }
 
-                aLine = strReader.ReadLine();
+                    aLine = strReader.ReadLine();
+                }
             }
 
             return ReturnString;
@@ -528,13 +534,15 @@ namespace WordleSover
         private string RemoveInvalid(string invalidLetters, string validWordleList)
         {
             int len = Math.Min(invalidLetters.Length, 26);
-
             string aLine = null;
             string ReturnString = null;
-            System.IO.StringReader strReader = new System.IO.StringReader(validWordleList);
-            aLine = strReader.ReadLine();
-            while (aLine != null)
+
+            if (validWordleList != null)
             {
+                System.IO.StringReader strReader = new System.IO.StringReader(validWordleList);
+                aLine = strReader.ReadLine();
+                while (aLine != null)
+                {
 #if MatchDebug
                 if (aLine == MATCH_WORD)
                 {
@@ -542,20 +550,21 @@ namespace WordleSover
                 }
 #endif
 
-                bool keepThisWord = true;
-                for (int i = 0; i < len; i++)
-                {
-                    if (aLine.Contains(invalidLetters[i]))
+                    bool keepThisWord = true;
+                    for (int i = 0; i < len; i++)
                     {
-                        keepThisWord = false;
-                        break;
+                        if (aLine.Contains(invalidLetters[i]))
+                        {
+                            keepThisWord = false;
+                            break;
+                        }
                     }
+                    if (keepThisWord == true)
+                    {
+                        ReturnString += aLine + '\n';
+                    }
+                    aLine = strReader.ReadLine();
                 }
-                if (keepThisWord == true)
-                {
-                    ReturnString += aLine + '\n';
-                }
-                aLine = strReader.ReadLine();
             }
             return ReturnString;
         }
@@ -571,13 +580,14 @@ namespace WordleSover
         {
             string aLine = null;
             string ReturnString = null;
-
-            if (matchedLetter != '?')
+            if (validWordleList != null)
             {
-                System.IO.StringReader strReader = new System.IO.StringReader(validWordleList);
-                aLine = strReader.ReadLine();
-                while (aLine != null)
+                if (matchedLetter != '?')
                 {
+                    System.IO.StringReader strReader = new System.IO.StringReader(validWordleList);
+                    aLine = strReader.ReadLine();
+                    while (aLine != null)
+                    {
 #if MatchDebug
                     if (aLine == MATCH_WORD)
                     {
@@ -585,11 +595,12 @@ namespace WordleSover
                     }
 #endif
 
-                    if (aLine[column] == matchedLetter)
-                    {
-                        ReturnString += aLine + '\n';
+                        if (aLine[column] == matchedLetter)
+                        {
+                            ReturnString += aLine + '\n';
+                        }
+                        aLine = strReader.ReadLine();
                     }
-                    aLine = strReader.ReadLine();
                 }
             }
             return ReturnString;
@@ -606,13 +617,14 @@ namespace WordleSover
         {
             string aLine = null;
             string ReturnString = null;
-
-            if (matchedLetter != '?')
+            if (validWordleList != null)
             {
-                System.IO.StringReader strReader = new System.IO.StringReader(validWordleList);
-                aLine = strReader.ReadLine();
-                while (aLine != null)
+                if (matchedLetter != '?')
                 {
+                    System.IO.StringReader strReader = new System.IO.StringReader(validWordleList);
+                    aLine = strReader.ReadLine();
+                    while (aLine != null)
+                    {
 #if MatchDebug
                     if (aLine == MATCH_WORD)
                     {
@@ -620,11 +632,12 @@ namespace WordleSover
                     }
 #endif
 
-                    if (aLine[column] != matchedLetter)
-                    {
-                        ReturnString += aLine + '\n';
+                        if (aLine[column] != matchedLetter)
+                        {
+                            ReturnString += aLine + '\n';
+                        }
+                        aLine = strReader.ReadLine();
                     }
-                    aLine = strReader.ReadLine();
                 }
             }
             return ReturnString;
